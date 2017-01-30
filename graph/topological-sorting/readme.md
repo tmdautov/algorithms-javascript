@@ -13,7 +13,7 @@ visits all the adjacent vertices to the current vertex, and once that list is ex
 push the current vertex onto a stack.
 
 ###Example
-![alt tag](https://github.com/tmdautov/algorithms-javascript/blob/master/graph/topological-sorting/toposort.png?raw=true)
+![alt tag](https://github.com/tmdautov/algorithms-javascript/blob/master/graph/topological-sorting/toposort.png = 100x50)
 
 ###Code
 
