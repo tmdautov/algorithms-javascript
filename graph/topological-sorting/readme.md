@@ -12,6 +12,9 @@ search. However, instead of immediately printing a vertex as it is visited, the 
 visits all the adjacent vertices to the current vertex, and once that list is exhausted, we
 push the current vertex onto a stack.
 
+###Example
+
+
 ###Code
 
 ```javascript
