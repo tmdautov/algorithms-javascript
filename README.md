@@ -1,6 +1,5 @@
 # algorithms-javascript
-| #             | Algo           | Description  |
+| #             | Description          | Problem  |
 | ------------- |:-------------:| -----:|
-| 1| topological sort | Algorithm which sort all vertexes of DAG using dfs  |
-| 2| dfs      |   $12 |
-| 3| bfs      |    $1 |
+| 1             | Topological sort | Algorithm which sort all vertexes of DAG using dfs  |
+
