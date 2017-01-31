@@ -1,6 +1,6 @@
 # algorithms-javascript
-| Tables        | Are           | Cool  |
+| #             | Algo           | Description  |
 | ------------- |:-------------:| -----:|
-| col 3 is      | right-aligned | $1600 |
-| col 2 is      | centered      |   $12 |
-| zebra stripes | are neat      |    $1 |
+| 1| topological sort | Algorithm which sort all vertexes of DAG |
+| 2| dfs      |   $12 |
+| 3| bfs      |    $1 |
