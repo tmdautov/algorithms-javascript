@@ -30,5 +30,7 @@ function List() {
     this.contains = contains;
 }
 
+### Append: adding element to a list
+Adds new element to end of list
 
 ```
