@@ -9,12 +9,14 @@ List is a simple data structure for storing elements
 ```javascript
 
 function List() {
+    // properties
     this.listSize = 0;
     this.pos = 0;
     this.dataStore = []; // initializes an empty array to store list elements
-    this.clear = clear;
-    this.find = find;
     
+    // methods
+    this.clear = clear;
+    this.find = find;    
     this.insert = insert;
     this.append = append;
     this.remove = remove;
