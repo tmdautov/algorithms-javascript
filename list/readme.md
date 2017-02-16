@@ -6,7 +6,7 @@ List is a simple data structure for storing elements
 
 ### List class implementation
 
-```
+```javascript
 
 function List() {
     this.listSize = 0;
@@ -30,7 +30,9 @@ function List() {
     this.contains = contains;
 }
 
-### Append: adding element to a list
-Adds new element to end of list
 
 ```
+
+
+### Append: adding element to a list
+Adds new element to end of list
