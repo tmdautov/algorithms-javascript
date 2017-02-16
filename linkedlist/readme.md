@@ -7,31 +7,88 @@ List is a simple data structure for storing elements
 ### List class implementation
 
 ```javascript
+var List = function (e) {
+    var self = this;
+    var first, last, head;
 
-function List() {
-    // properties
-    this.listSize = 0;
-    this.pos = 0;
-    this.dataStore = []; // initializes an empty array to store list elements
-    
-    // methods
-    this.clear = clear;
-    this.find = find;    
-    this.insert = insert;
-    this.append = append;
-    this.remove = remove;
-    this.front = front;
-    this.end = end;
-    this.prev = prev;
-    this.next = next;
-    this.length = length;
-    this.currPos = currPos;
-    this.moveTo = moveTo;
-    this.getElement = getElement;
-    this.length = length;
-    this.contains = contains;
-}
+    self.insert = function (value) {
+        var node = new Node(value);
+        if (first == null) {
+            first = last = node;
+        } else {
+            var head = first;
+            while (head.next != null) {
+                head = head.next;
+            }
+            head.next = node;
+            last = head.next;
+        }
+    }
 
+    self.show = function () {
+        var head = first;
+        while (head != null) {
+            console.log(head.value);
+            head = head.next;
+        }
+    }
+
+    self.remove = function (value) {
+        var found = false;
+        var head = first;
+        while (head != null) {
+            if (first.value == value) {
+                prev = head = first = first.next;
+                found = true;
+            } else {
+                if (head.value == value) {
+                    found = true;
+                    prev.next = head.next;
+                }
+                prev = head;
+                head = head.next;                            
+            }
+        }
+
+        if (!found) {
+            console.log("#" + value + " not found");
+        }
+    }
+
+    self.update = function (value, newValue) {
+        var head = first;
+        while (head != null) {
+            if (head.value == value) {
+                head.value = newValue;
+            }
+            head = head.next;
+        }
+
+    }
+
+    var Node = function (value) {
+        this.value = value;
+        var next = {};
+    }
+
+    return self;
+};
+
+var list = new List();
+list.insert(1);
+list.insert(2);
+list.insert(3);
+list.insert(4);
+
+list.show();
+console.log("____________________________");
+
+list.update(2, 5);           
+list.show();
+console.log("____________________________");
+
+list.remove(3);
+list.show();
 
 ```
 
