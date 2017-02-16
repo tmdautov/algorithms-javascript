@@ -36,3 +36,9 @@ function List() {
 
 ### Append: adding element to a list
 Adds new element to end of list
+
+```javascript
+function append(element) {
+    this.dataStore[this.listSize++] = element;
+}
+```
