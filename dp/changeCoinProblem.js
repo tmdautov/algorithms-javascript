@@ -2,6 +2,14 @@
 // Time complexity: 
 // Solution: button up dynamic programming
 
+var fs = require('fs');
+var input = fs.readFileSync('input.txt', 'utf8');
+var lines = input[0];
+var coins = input[0];
+var total = input[1];
+
+console.log(makeChange(coins, total));
+
 function makeChange(coins, n) {
   var table = [];
   var m = coins.length
