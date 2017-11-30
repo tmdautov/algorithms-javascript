@@ -12,5 +12,5 @@ List of classic alogithms on javascript which every programmer should know. I pu
 3. [Tarjan algorithm]().
 
 
-## Geomtry
+## Geometry
 1. [Convex hull]()
