@@ -1,5 +1,5 @@
 # Algorithms-javascript
-There is list of classic alogithms on javascript which every programmer should know. I put some links to problem with every algorithm, so you can practice with it. 
+List of classic alogithms on javascript which every programmer should know. I put some links to problems with every algorithm, so you can practice with it. Algorithms it'a fundamental tool to be a Software Engeneer.
 
 ## Dynamic programming
 1. [Change coin problem](https://github.com/tmdautov/algorithms-javascript/blob/master/dp/changeCoinProblem.js). Given n coins and total sum which need to get. Find number of ways to get total sum.
