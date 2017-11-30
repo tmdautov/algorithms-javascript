@@ -7,7 +7,7 @@
 3. [Longest common subsequence]()
 
 ## Graph theory
-1. Dfs. Given a undirected graph. Find number of edges.
+1. [Number of edges with dfs](). Given a undirected graph. Find number of edges.
 2. 
 
 
