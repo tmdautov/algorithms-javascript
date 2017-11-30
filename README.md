@@ -8,6 +8,7 @@ List of classic alogithms on javascript which every programmer should know. I pu
 
 ## Graph theory
 1. [Number of edges with dfs](). Given a undirected graph. Find number of edges.
-2. 
+2. [Topological sort](). Given a graph. Sort nodes in ascending order.
+3. [Tarjan algorithm]().
 
 
