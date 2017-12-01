@@ -5,6 +5,7 @@ List of classic alogithms on javascript which every programmer should know. I pu
 1. [Change coin problem](https://github.com/tmdautov/algorithms-javascript/blob/master/dp/changeCoinProblem.js). Given n coins and total sum which need to get. Find number of ways to get total sum.
 2. [Max rectangle in matrix](https://github.com/tmdautov/algorithms-javascript/blob/master/dp/maxRectangleInMatrix.js). Given binary matrix. Find max submatrix of 1.
 3. [Longest common subsequence]()
+5. [Knapsack: O(nm)]().  Given n things with their weight and cost. Given total weight of knapsack. You need to take maximum money with knapsack limitations.
 
 ## Graph theory
 1. [Number of edges with dfs](). Given a undirected graph. Find number of edges.
