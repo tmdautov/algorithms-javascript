@@ -19,5 +19,5 @@ List of classic alogithms on javascript which every programmer should know. I pu
 
 
 ## Stack
-1. [Valid paranthesis](). Given string of paranthesis. Determine is it valid.
+1. [Valid paranthesis](https://github.com/tmdautov/algorithms-javascript/blob/master/stack/validParenthesis.js). Given string of paranthesis. Determine is it valid.
 
