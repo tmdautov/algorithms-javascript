@@ -17,3 +17,7 @@ List of classic alogithms on javascript which every programmer should know. I pu
 1. [Convex hull](). Даны N точек на плоскости. Построить их выпуклую оболочку, т.е. наименьший выпуклый многоугольник, содержащий все эти точки.
 2. [Segment intersection](). Given two segments. Determine are they intersects.
 
+
+## Stack
+1. [Valid paranthesis](). Given string of paranthesis. Determine is it valid.
+
