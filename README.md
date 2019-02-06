@@ -21,3 +21,5 @@ List of classic alogithms on javascript which every programmer should know. I pu
 ## Stack
 1. [Valid paranthesis](https://github.com/tmdautov/algorithms-javascript/blob/master/stack/validParenthesis.js). Given string of paranthesis. Determine is it valid.
 
+## Sort
+1. [Merge sort, O(nlogn)](https://github.com/tmdautov/algorithms/blob/master/sort/mergesort.java). Merge sort is a divide-and-conquer algorithm based on the idea of breaking down a list into several sub-lists until each sublist consists of a single element and merging those sublists in a manner that results into a sorted list.
