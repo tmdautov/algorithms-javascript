@@ -24,3 +24,42 @@ Time complexity: O(N+M)
   - Грядки
 - leetcode
   - All paths from source to target
+
+
+```
+public class Derevo {
+
+   int n;
+   int[][] g;
+   boolean used[];
+   int edges = 0;
+   int count = 0;
+
+   void dfs(int start) {
+       if (used[start]) return;
+       used[start] = true;
+       for (int i=0; i<n; i++) {
+           if (used[i]==false && g[start][i] > 0) {
+               dfs(i);
+               count++;
+           }
+       }
+   }
+
+   public void solve() {
+       n = sc.nextInt();
+       g = new int[n][n];
+       used = new boolean[n];
+       for (int i=0; i<n; i++) {
+           for (int j=0; j<n; j++) {
+               g[i][j] = sc.nextInt();
+           }
+       }
+       dfs(0);
+   }
+
+   public static void main(String[] args) {
+       new Derevo().solve();
+   }
+}
+```
