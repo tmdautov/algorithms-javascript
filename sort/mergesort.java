@@ -1,49 +1,51 @@
-/**
-Merge sort is a divide-and-conquer algorithm based on the idea of breaking down a list into several sub-lists
-until each sublist consists of a single element and merging those sublists in a manner that results into a sorted list.
+// ES6 flag --harmony_default_parameters needed when run in Node 5.0.0
+function mergesort(list, compare = (x, y) => {return x < y} ) {
 
-*/
+  // breaking recursive call
+  if(list.length <= 1) return list;
 
-public class MergeSort {
+  // ES6 flag --harmony_destructuring needed when run in Node 5.0.0
+  var {leftHalf, rigthHalf } = splitList(list);
 
-    public static void main(String[] args) {
-        int[] a = { 5, 1, 6, 2, 3, 4 };
-        mergeSort(a, a.length);
-        for (int i = 0; i < a.length; i++)
-            System.out.println(a[i]);
-    }
-
-    public static void mergeSort(int[] a, int n) {
-        if (n < 2) return;
-        int mid = n / 2;
-        int[] l = new int[mid];
-        int[] r = new int[n - mid]; // why n - mid?
-
-        for (int i = 0; i < mid; i++) l[i] = a[i];
-        for (int i = mid; i < n; i++) r[i - mid] = a[i]; // why i - mid?
-
-        mergeSort(l, mid);
-        mergeSort(r, n - mid);
-
-        merge(a, l, r, mid, n - mid);
-    }
-
-    public static void merge(int[] a, int[] l, int[] r, int left, int right) {
-
-        int i = 0, j = 0, k = 0;
-
-
-        // Select the smallest value from the front of each list (excluding values already in the sorted array)
-        while (i < left && j < right) {
-            if (l[i] <= r[j]) // Select the minimum of the two values
-                a[k++] = l[i++]; // Add the selected value to the sorted array
-            else
-                a[k++] = r[j++];
-        }
-
-
-        // When one list becomes empty, copy all values from the remaining array into the sorted array
-        while (i < left) a[k++] = l[i++];
-        while (j < right) a[k++] = r[j++];
-    }
+  // Recursive call.
+  // Passing compare function to recursive calls to prevent the creation of unnecessary
+  // functions on each call.
+  return jointLists(mergesort(leftHalf, compare), mergesort(rigthHalf, compare), compare);
 }
+
+function splitList(list){
+  if (list.length == 0) return {leftHalf : [], rigthHalf: []};
+  if (list.length == 1) return {leftHalf : list , rigthHalf : []};
+  var index = Math.floor(list.length / 2);
+  return {leftHalf : list.slice(0, index), rigthHalf : list.slice(index)};
+}
+
+function jointLists(list1, list2, compare){
+
+  // getting the biggest array
+  var iterator = list1.length > list2.length ? list1.length : list2.length;
+
+  // defining auxiliar variables
+  var [result, index1, index2] = [[], 0, 0];
+
+  // sortering previously ordered arrays
+  while(true){
+    if(compare(list1[index1], list2[index2])){
+      result.push(list1[index1]);
+      index1++;
+    } else {
+      result.push(list2[index2]);
+      index2++;
+    }
+    if(index1 == list1.length || index2 == list2.length) break;
+  }
+
+  // some of the array still have elements that are not listed on the result arrays,
+  // since this elements have a biggest value (according to the compare function)
+  // we can just push this elements at the very end of the result
+  if(index1 < list1.length) return result.concat(list1.slice(index1));
+  if(index2 < list2.length) return result.concat(list2.slice(index2));
+  return result;
+}
+
+console.log(mergesort([34, -2, 3 , 5, -6, 1, 35]));
